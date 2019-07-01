@@ -328,8 +328,10 @@ end
 mergeTables(files, emitModule(api, "love"))
 
 for i, v in pairs(files) do
-	os.execute("mkdir -p " .. dirname(i))
-	local f = io.open(i, "w")
+	dir = dirname(i)
+	print("create directory " .. dir)
+	os.execute("mkdir " .. dir:gsub("%/", "\\\\"))
+	local f = io.open(i, "w+")
 	f:write(v)
 	f:close()
 end
