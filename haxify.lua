@@ -114,6 +114,8 @@ do
 		value = "Dynamic",
 		any = "Dynamic",
 		Variant = "Dynamic",
+		mat4 = "Table<Dynamic,Dynamic>",
+		vec4 = "Table<Dynamic,Dynamic>",
 
 		-- FIXME
 		["ShaderVariableType"] = "String",
